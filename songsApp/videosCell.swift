@@ -1,24 +1,30 @@
-//
-//  videosCell.swift
-//  songsApp
-//
-//  Created by FARIDO on 3/3/18.
-//  Copyright © 2018 FARIDO. All rights reserved.
-//
-
 import UIKit
 
 class videosCell: UITableViewCell {
 
+    
+    @IBOutlet weak var songNameLablr: UILabel!
+    @IBOutlet weak var iamge: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func updateUI(customCell: customCell) {
+        songNameLablr.text = customCell.videoTitle
+        
+        let url = URL(string: customCell.imageURL)!
+        
+        DispatchQueue.global().async {
+            do {
+                let data = try Data(contentsOf: url)
+                DispatchQueue.global().sync {
+                    self.iamge.image = UIImage(data: data)
+                }
+            } catch  {
+                
+            }
+        }
     }
+    
 
 }

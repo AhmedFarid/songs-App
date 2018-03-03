@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		6904ECEB204AE12200C1023B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6904ECEA204AE12200C1023B /* AppDelegate.swift */; };
-		6904ECED204AE12200C1023B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6904ECEC204AE12200C1023B /* ViewController.swift */; };
+		6904ECED204AE12200C1023B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6904ECEC204AE12200C1023B /* MainVC.swift */; };
 		6904ECF0204AE12200C1023B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6904ECEE204AE12200C1023B /* Main.storyboard */; };
 		6904ECF2204AE12200C1023B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6904ECF1204AE12200C1023B /* Assets.xcassets */; };
 		6904ECF5204AE12200C1023B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6904ECF3204AE12200C1023B /* LaunchScreen.storyboard */; };
+		6904ED00204AF90400C1023B /* still time.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6904ECFF204AF90400C1023B /* still time.ttf */; };
+		6904ED03204AFE9300C1023B /* videoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6904ED02204AFE9300C1023B /* videoVC.swift */; };
+		6904ED05204B09E300C1023B /* videosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6904ED04204B09E300C1023B /* videosCell.swift */; };
+		6904ED07204B0EB900C1023B /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6904ED06204B0EB900C1023B /* customCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6904ECE7204AE12100C1023B /* songsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = songsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6904ECEA204AE12200C1023B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6904ECEC204AE12200C1023B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6904ECEC204AE12200C1023B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		6904ECEF204AE12200C1023B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6904ECF1204AE12200C1023B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6904ECF4204AE12200C1023B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6904ECF6204AE12200C1023B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6904ECFF204AF90400C1023B /* still time.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "still time.ttf"; sourceTree = "<group>"; };
+		6904ED02204AFE9300C1023B /* videoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = videoVC.swift; sourceTree = "<group>"; };
+		6904ED04204B09E300C1023B /* videosCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = videosCell.swift; sourceTree = "<group>"; };
+		6904ED06204B0EB900C1023B /* customCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		6904ECE9204AE12100C1023B /* songsApp */ = {
 			isa = PBXGroup;
 			children = (
+				6904ED01204AF9D200C1023B /* Files */,
+				6904ECFE204AE3C100C1023B /* Model */,
+				6904ECFD204AE3A000C1023B /* View */,
+				6904ECFC204AE36600C1023B /* Controller */,
 				6904ECEA204AE12200C1023B /* AppDelegate.swift */,
-				6904ECEC204AE12200C1023B /* ViewController.swift */,
+				6904ECF3204AE12200C1023B /* LaunchScreen.storyboard */,
 				6904ECEE204AE12200C1023B /* Main.storyboard */,
 				6904ECF1204AE12200C1023B /* Assets.xcassets */,
-				6904ECF3204AE12200C1023B /* LaunchScreen.storyboard */,
 				6904ECF6204AE12200C1023B /* Info.plist */,
 			);
 			path = songsApp;
+			sourceTree = "<group>";
+		};
+		6904ECFC204AE36600C1023B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6904ECEC204AE12200C1023B /* MainVC.swift */,
+				6904ED02204AFE9300C1023B /* videoVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6904ECFD204AE3A000C1023B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6904ED04204B09E300C1023B /* videosCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6904ECFE204AE3C100C1023B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6904ED06204B0EB900C1023B /* customCell.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6904ED01204AF9D200C1023B /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				6904ECFF204AF90400C1023B /* still time.ttf */,
+			);
+			name = Files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6904ECF5204AE12200C1023B /* LaunchScreen.storyboard in Resources */,
+				6904ED00204AF90400C1023B /* still time.ttf in Resources */,
 				6904ECF2204AE12200C1023B /* Assets.xcassets in Resources */,
 				6904ECF0204AE12200C1023B /* Main.storyboard in Resources */,
 			);
@@ -136,7 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6904ECED204AE12200C1023B /* ViewController.swift in Sources */,
+				6904ECED204AE12200C1023B /* MainVC.swift in Sources */,
+				6904ED05204B09E300C1023B /* videosCell.swift in Sources */,
+				6904ED07204B0EB900C1023B /* customCell.swift in Sources */,
+				6904ED03204AFE9300C1023B /* videoVC.swift in Sources */,
 				6904ECEB204AE12200C1023B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,35 +1,29 @@
-//
-//  videoVC.swift
-//  songsApp
-//
-//  Created by FARIDO on 3/3/18.
-//  Copyright © 2018 FARIDO. All rights reserved.
-//
-
 import UIKit
 
 class videoVC: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var songLable: UILabel!
+    @IBOutlet weak var webView: UIWebView!
+    
+    
+    private var _viedo: customCell!
+    
+    var viedo:customCell {
+        get {
+            return _viedo
+        }set {
+            _viedo = newValue
+        }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        songLable.text = viedo.videoTitle
+        webView.loadHTMLString(viedo.videoURL, baseURL: nil)
+        
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+       
     }
-    */
 
 }
